@@ -1,0 +1,15 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+
+# Uploaded files
+app/uploads/
+
+# Local SQLite database
+*.db
+
+# OS-specific files
+.DS_Store
