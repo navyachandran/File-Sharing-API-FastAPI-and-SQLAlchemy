@@ -8,39 +8,41 @@ It supports:
 4) All data is stored locally in a SQLite database and the uploaded files are saved on disk.
 
 
-3.Prerequisites
+# 1.Prerequisites
 Python 3.10+
 git, pip
 macOS/Linux terminal or Windows PowerShell
 
-2.Get the code and set up a virtual environment
-a)Clone the repo:
+# 2.Get the code and set up a virtual environment
+### a)Clone the repo:
 
 git clone <repo_url>
 
-b)create and activate venv:
+### b)create and activate venv:
 
 python3 -m venv venv
 
-c)macOS/Linux:
+### c)macOS/Linux:
 
 source venv/bin/activate
 
-3.Install dependencies mentioned in requirements.txt
+ # 3.Install dependencies mentioned in requirements.txt
 
---> pip install -r requirements.txt
+:
+➡ pip install -r requirements.txt
 
-4. To run the code 
+# 4. To run the code 
 
-a)default port 8000:
+### a)default port 8000:
 
-b)uvicorn app.main:app --reload
+#### uvicorn app.main:app --reload
 
-(or) to choose a clean port :
+#### (or) to choose a clean port :
+
 uvicorn app.main:app --reload --port 9000
 
-c)Once running, open Swagger UI and test all the endpoints by uploading,listing and downloading files.:
-➡ http://127.0.0.1:8000/docs (or 9000 if you used a custom port)
+### c)Once running, open Swagger UI and test all the endpoints by uploading,listing and downloading files:
+#### http://127.0.0.1:8000/docs (or 9000 if you used a custom port)
 
 # API ENDPOINTS
 | Method | Endpoint           | Description             |
@@ -51,13 +53,15 @@ c)Once running, open Swagger UI and test all the endpoints by uploading,listing 
 | GET    | `/health`          | API health check        |
 
 
-5.To run the test case 
--->pytest -q
+# 5.To run the test case :
 
-6.Reset local state (clean slate)
+#### pytest -q
 
-remove uploaded files & database
--->rm -rf app/uploads/*
+# 6.Reset local state (clean slate):
+### remove uploaded files and database
 
--->rm -f app/files.db
+#### rm -rf app/uploads/*
+
+
+#### rm -f app/files.db
 
