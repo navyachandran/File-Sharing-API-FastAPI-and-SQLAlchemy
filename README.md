@@ -14,13 +14,13 @@ git, pip
 macOS/Linux terminal or Windows PowerShell
 
 2. Get the code & set up a virtual environment
-# Clone the repo
+Clone the repo
 git clone <repo_url>
 
-# create & activate venv
+create and activate venv
 python3 -m venv venv
 
-# macOS/Linux:
+macOS/Linux:
 source venv/bin/activate
 
 3. Install dependencies mentioned in requirements.txt
@@ -29,10 +29,10 @@ pip install -r requirements.txt
 
 4. To run the code 
 
-# default port 8000
+default port 8000
 uvicorn app.main:app --reload
 
-# or to choose a clean port 
+or to choose a clean port 
 uvicorn app.main:app --reload --port 9000
 
 Once running, open Swagger UI and test all the endpoints by uploading,listing and downloading files.:
@@ -54,5 +54,6 @@ pytest -q
 
 # remove uploaded files & database
 rm -rf app/uploads/*
+
 rm -f app/files.db
 
